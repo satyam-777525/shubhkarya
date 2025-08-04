@@ -17,7 +17,7 @@ const AdminLogin = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', form);
+      const res = await axios.post('https://shubhkaryabackend.onrender.com/api/users/login', form);
       const { token, user } = res.data;
 
       if (user?.role !== 'admin') {

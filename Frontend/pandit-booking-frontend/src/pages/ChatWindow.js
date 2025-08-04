@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
 
 // Use your deployed backend URL here to connect Socket.IO
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = 'https://shubhkaryabackend.onrender.com';
 
 // Create Socket.IO client instance
 const socket = io(BACKEND_URL, {

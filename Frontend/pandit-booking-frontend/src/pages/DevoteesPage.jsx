@@ -25,7 +25,7 @@ function DevoteesPage() {
   async function handleSave(id) {
     try {
       const { name, email, ...rest } = editForm[id];
-      await fetch(`https://localhost:5000/api/users/update/${id}`, {
+      await fetch(`https://shubhkaryabackend.onrender.com/api/users/update/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(rest),

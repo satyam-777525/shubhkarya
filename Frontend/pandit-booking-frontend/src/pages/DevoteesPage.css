@@ -1,0 +1,113 @@
+.devotees-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.devotees-filters input {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  min-width: 180px;
+  flex-shrink: 1;
+}
+
+.devotees-filters button {
+  border: none;
+  background: #2980b9;
+  color: #fff;
+  border-radius: 6px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.devotees-filters button:hover {
+  background: #1c5980;
+}
+
+.devotees-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.7rem;
+}
+
+.devotee-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.3rem 1.6rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  transition: box-shadow 0.3s ease, transform 0.2s;
+}
+
+.devotee-card:hover,
+.devotee-card:focus {
+  box-shadow: 0 12px 36px rgba(39, 174, 96, 0.18);
+  transform: translateY(-4px);
+}
+
+.devotee-card p {
+  margin: 0 0 0.4rem 0;
+  color: #34495e;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.devotee-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+}
+
+.devotee-field label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #2980b9;
+  user-select: none;
+}
+
+.devotee-field input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+
+.devotee-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.6rem;
+  justify-content: flex-start;
+}
+
+.devotee-actions button {
+  border: none;
+  background: #2980b9;
+  color: #fff;
+  padding: 9px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.25s ease;
+}
+
+.devotee-actions button:hover {
+  background: #1c5980;
+}
+
+@media (max-width: 740px) {
+  .devotees-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .devotees-filters {
+    justify-content: flex-start;
+  }
+}

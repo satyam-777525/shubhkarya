@@ -1,0 +1,162 @@
+.pandit-filters {
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pandit-filters input {
+  padding: 7px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  flex: 1 1 150px;
+  min-width: 140px;
+}
+
+.pandit-filters button {
+  border: none;
+  background: #2980b9;
+  color: #fff;
+  border-radius: 6px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.pandit-filters button:hover {
+  background: #1c5980;
+}
+
+.pandit-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.pandit-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.4rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s;
+  outline: none;
+  user-select: none;
+  position: relative;
+}
+
+.pandit-card:focus,
+.pandit-card:hover,
+.pandit-card.expanded {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px);
+  z-index: 10;
+}
+
+.pandit-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2980b9;
+  margin-bottom: 0.6rem;
+}
+
+.pandit-city {
+  font-weight: 500;
+  color: #555;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Hide pandit-details by default; show on hover or if expanded */
+.pandit-details {
+  display: none;
+  margin-top: 1rem;
+  color: #34495e;
+  font-size: 0.95rem;
+}
+
+.pandit-card:hover .pandit-details,
+.pandit-card.expanded .pandit-details {
+  display: block;
+}
+
+.pandit-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.pandit-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.pandit-actions button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-verify {
+  background-color: #27ae60;
+}
+
+.btn-verify:hover {
+  background-color: #1e8449;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+  background-color: #b93227;
+}
+
+.upload-photo {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.upload-photo input[type="file"] {
+  cursor: pointer;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.upload-photo button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.upload-photo button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.upload-photo button:hover:not(:disabled) {
+  background-color: #1c5980;
+}

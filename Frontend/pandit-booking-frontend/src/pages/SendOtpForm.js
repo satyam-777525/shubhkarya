@@ -7,7 +7,7 @@ const SendOtpForm = ({ onSent }) => {
 
   const sendOtp = async () => {
     try {
-      await axios.post('http://localhost:5000/api/users/send-otp', { email });
+      await axios.post('https://shubhkaryabackend.onrender.com/api/users/send-otp', { email });
       setMsg('OTP sent successfully');
       onSent(email); // pass email to next step
     } catch (err) {

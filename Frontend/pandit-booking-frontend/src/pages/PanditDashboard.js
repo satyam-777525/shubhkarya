@@ -140,7 +140,7 @@ function PanditDashboard() {
             if (_id) {
                 setLoadingBookings(true);
                 try {
-                    const res = await fetch(`http://localhost:5000/api/bookings/view?panditid=${_id}`);
+                    const res = await fetch(`https://shubhkaryabackend.onrender.com/api/bookings/view?panditid=${_id}`);
                     const data = await res.json();
                     setBookings(data);
                 } catch (error) {
@@ -197,7 +197,7 @@ function PanditDashboard() {
 
     const updateStatus = async (id, status) => {
         try {
-            const res = await fetch(`http://localhost:5000/api/bookings/status/${id}`, {
+            const res = await fetch(`https://shubhkaryabackend.onrender.com/api/bookings/status/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ status }),

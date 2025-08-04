@@ -8,7 +8,7 @@ import "./Home.css";
 import { postLocation } from '../api/api'; 
 
 // Centralize backend URL for easy updates
-const backendURL = "http://localhost:5000";
+const backendURL = "https://shubhkaryabackend.onrender.com";
 
 // Helper to construct image URLs, providing a default fallback
 const getImageUrl = (path) => {

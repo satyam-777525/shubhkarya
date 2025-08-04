@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // Update with your backend URL
+  baseURL: 'https://shubhkaryabackend.onrender.com/api', // Update with your backend URL
 });
 
 //  Automatically attach token
@@ -63,7 +63,7 @@ export const uploadPanditPhoto = (id, formData) =>
 //
 export const getVerifiedPandits = () => API.get('/pandits/view');
 export const deletePandit = async (id) => {
-  return await fetch(`http://localhost:5000/api/pandits/delete/${id}`, {
+  return await fetch(`https://shubhkaryabackend.onrender.com/api/pandits/delete/${id}`, {
     method: 'DELETE',
   });
 };

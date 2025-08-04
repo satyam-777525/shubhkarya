@@ -7,7 +7,7 @@ const VerifyOtpForm = ({ email, onVerified }) => {
 
   const verifyOtp = async () => {
     try {
-      await axios.post('http://localhost:5000/api/users/verify-otp', { email, otp });
+      await axios.post('https://shubhkaryabackend.onrender.com/api/users/verify-otp', { email, otp });
       setMsg('OTP verified!');
       onVerified();
     } catch (err) {
